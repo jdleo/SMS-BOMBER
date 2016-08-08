@@ -17,9 +17,10 @@ import smtplib
 i=0
 
 ##declaring server variable , starting email service, and logging in
+## be sure to change out gmail and password in server.login
 server = smtplib.SMTP('smtp.gmail.com', 587)
 server.starttls()
-server.login("YOUR GMAIL", "YOUR PASSWORD")
+server.login("USERNAME@GMAIL.COM", "PASSWORD")
 
 msg = "ENTER YOUR MESSAGE IN THESE QUOTES"
 
@@ -31,6 +32,7 @@ def sendEmail():
 while i < 20:
     sendEmail()
     i = i+1
+    print("Text #" + str(i) + " sent!")
     ## 2 seconds between each text. delete line below if you want them rapid
     time.sleep(2)
 
