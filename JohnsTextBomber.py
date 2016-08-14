@@ -1,40 +1,30 @@
 ########################
-##                    ##
 ## John's Text Bomber ##
 ##   github @jdleo    ##
 ########################
-
-## FOR ATT ONLY.
-## If the recepient has another carrier,
-## look for the carrier's email domain online
-## and swap it for mms.att.net on line 28
-
-##importing time framework for intervals and smtplib for sending emails
 import time
 import smtplib
 
-##counter variable for loop
-i=0
+#This is the configuration, you can change any of these values on the right
+email_provider = 'smtp.gmail.com' #server for your email- see ReadMe on github
+email_address = "jleonardo.jechs@gmail.com" #your email
+email_port = 587 #port for email server- see ReadMe on github
+password = "kpjmmu55" #your email password
+msg = "Your message that you want sent to target" #your txt message
+text_amount = 20 #amount sent
+target_email = "2096631109@mms.att.net" #target number. must be in email form- see ReadMe on github
+wait = 1 #seconds in between messages
 
-##declaring server variable , starting email service, and logging in
-## be sure to change out gmail and password in server.login
-server = smtplib.SMTP('smtp.gmail.com', 587)
+i = 0 #dont change
+server = smtplib.SMTP(email_provider, email_port)
 server.starttls()
-server.login("USERNAME@GMAIL.COM", "PASSWORD")
-
-msg = "ENTER YOUR MESSAGE IN THESE QUOTES"
-
-##send email function
+server.login(email_address, password)
 def sendEmail():
-    server.sendmail("YOUR EMAIL", "<THEIR NUMBER>@mms.att.net", msg)
-
-##loop. change the "20" to any number you want. this is # of texts sent
-while i < 20:
+    server.sendmail(email_address,target_email,msg)
+while i < text_amount:
     sendEmail()
-    i = i+1
-    print("Text #" + str(i) + " sent!")
-    ## 2 seconds between each text. delete line below if you want them rapid
-    time.sleep(2)
-
-print(str(i) + " texts were sent! Hope you had fun!")
+    i = i + 1
+    print(str(i) + " texts sent")
+    time.sleep(wait)
+print(str(i) + " texts were sent. Hope you had a good time ;)")
 server.quit()
