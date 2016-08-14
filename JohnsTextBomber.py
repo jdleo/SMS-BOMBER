@@ -5,7 +5,7 @@
 import time
 import smtplib
 
-#This is the configuration, you can change any of these values on the right
+#CONFIG. You can change any of the values on the right.
 email_provider = 'smtp.gmail.com' #server for your email- see ReadMe on github
 email_address = "YourEmail@gmail.com" #your email
 email_port = 587 #port for email server- see ReadMe on github
