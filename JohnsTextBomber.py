@@ -1,6 +1,5 @@
 ########################
 ## John's Text Bomber ##
-##   github @jdleo    ##
 ########################
 import time
 import smtplib
