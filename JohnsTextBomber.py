@@ -1,6 +1,4 @@
-########################
 ## John's Text Bomber ##
-########################
 import time
 import smtplib
 
