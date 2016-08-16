@@ -16,10 +16,9 @@ i = 0 #dont change
 server = smtplib.SMTP(email_provider, email_port)
 server.starttls()
 server.login(email_address, password)
-def sendEmail():
-    server.sendmail(email_address,target_email,msg)
+
 while i < text_amount:
-    sendEmail()
+    server.sendmail(email_address,target_email,msg)
     i = i + 1
     print(str(i) + " texts sent")
     time.sleep(wait)
