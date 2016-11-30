@@ -16,11 +16,9 @@ i = 0 #dont change
 server = smtplib.SMTP(email_provider, email_port)
 server.starttls()
 server.login(email_address, password)
-
-while i < text_amount:
+for _ in range(0,text_amount):
     server.sendmail(email_address,target_email,msg)
-    i = i + 1
-    print(str(i) + " texts sent")
+    print("sent")
     time.sleep(wait)
-print(str(i) + " texts were sent. Hope you had a good time ;)")
+print("{} texts were sent. Hope you had a good time ;)".format(text_amount))
 server.quit()
