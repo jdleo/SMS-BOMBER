@@ -12,7 +12,6 @@ text_amount = 20 #amount sent
 target_email = "5551234567@mms.att.net" #target number. must be in email form- see ReadMe on github
 wait = 1 #seconds in between messages
 
-i = 0 #dont change
 server = smtplib.SMTP(email_provider, email_port)
 server.starttls()
 server.login(email_address, password)
