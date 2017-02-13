@@ -9,6 +9,9 @@ You'll notice that you need the target email address. Here is a cool website:
 http://freecarrierlookup.com  
 Type in number, and it will resolve it to an mms email that you can paste in config  
   
+###Important:  
+You must have support for "less secure apps" set to "turn on" on your Gmail. Here is the link to do so: https://www.google.com/settings/security/lesssecureapps  
+  
 ###Have fun!
   
 
