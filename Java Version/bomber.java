@@ -54,6 +54,8 @@ class EmailClient {
 				Transport.send(message);
 				Thread.sleep(waitTime * 1000);;
 			}
+			
+			JOptionPane.showMessageDialog(null, String.format("%s texts sent to %s", amount, toEmail));
 
 		} catch (MessagingException e) {
 			throw new RuntimeException(e);
