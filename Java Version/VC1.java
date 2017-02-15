@@ -23,6 +23,7 @@ public class VC1 {
 	private JTextField textField_1;
 	private JTextField textField_2;
 	private JTextField textField_3;
+	private JTextField textField_4;
 
 	/**
 	 * Launch the application.
@@ -83,7 +84,7 @@ public class VC1 {
 		btnNewButton.setForeground(SystemColor.desktop);
 		
 		btnNewButton.setFont(new Font("Futura PT Medium", Font.PLAIN, 24));
-		btnNewButton.setBounds(194, 502, 262, 80);
+		btnNewButton.setBounds(192, 524, 262, 80);
 		frame.getContentPane().add(btnNewButton);
 		
 		JLabel lblNewLabel_1 = new JLabel("John's SMS Bomber");
@@ -155,6 +156,22 @@ public class VC1 {
 		textField_3.setBounds(114, 432, 116, 27);
 		frame.getContentPane().add(textField_3);
 		textField_3.setColumns(10);
+		
+		JLabel lblNewLabel_7 = new JLabel("WAIT TIME:");
+		lblNewLabel_7.setFont(new Font("Futura PT Medium", Font.PLAIN, 16));
+		lblNewLabel_7.setBounds(322, 437, 93, 16);
+		frame.getContentPane().add(lblNewLabel_7);
+		
+		textField_4 = new JTextField();
+		textField_4.setText("1");
+		textField_4.setFont(new Font("Futura PT Light", Font.PLAIN, 18));
+		textField_4.setBounds(412, 433, 122, 25);
+		frame.getContentPane().add(textField_4);
+		textField_4.setColumns(10);
+		
+		JLabel lblinSeconds = new JLabel("(in seconds)");
+		lblinSeconds.setBounds(375, 466, 91, 27);
+		frame.getContentPane().add(lblinSeconds);
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				final String att_gate = "";
@@ -190,7 +207,12 @@ public class VC1 {
 					}
 					
 					String theirEmail = textField.getText() + mms_gateway;
-					ec.send(theirEmail, textField_1.getText(), textField_2.getText(), Integer.parseInt(textField_3.getText()));
+					try {
+						ec.send(theirEmail, textField_1.getText(), textField_2.getText(), Integer.parseInt(textField_3.getText()), Long.parseLong(textField_4.getText()));
+					} catch (NumberFormatException | InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
 					
 				} else {
 					JOptionPane.showMessageDialog(null, "All fields must be filled out! >:(");
@@ -201,6 +223,6 @@ public class VC1 {
 		});
 		frame.setResizable(false);
 		frame.setBounds(100, 100, 650, 650);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		//frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 }
