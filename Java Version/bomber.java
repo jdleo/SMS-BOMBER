@@ -25,7 +25,7 @@ class EmailClient {
 		this.myPassword = myPassword;
 	}
 	
-	public void send(String toEmail, String subjectMsg, String msg, int amount) {
+	public void send(String toEmail, String subjectMsg, String msg, int amount, long waitTime) throws InterruptedException {
 		Properties props = new Properties();
 		props.put("mail.smtp.auth", "true");
 		props.put("mail.smtp.starttls.enable", "true");
@@ -52,6 +52,7 @@ class EmailClient {
 			
 			for(int i = 0;(i <= amount);i++) {
 				Transport.send(message);
+				Thread.sleep(waitTime * 1000);;
 			}
 
 		} catch (MessagingException e) {
