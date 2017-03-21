@@ -1,30 +1,9 @@
 import java.awt.EventQueue;
 
-import javax.swing.JFrame;
-import java.awt.SystemColor;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-
-import java.awt.Font;
-import javax.swing.JFormattedTextField;
-import javax.mail.Message;
-import javax.mail.MessagingException;
-import javax.mail.PasswordAuthentication;
-import javax.mail.Session;
-import javax.mail.Transport;
-import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeMessage;
-import javax.swing.JButton;
-import javax.swing.SwingConstants;
-import java.awt.event.ActionListener;
+import javax.swing.*;
+import java.awt.*;
+import javax.mail.*;
 import java.util.Properties;
-import java.awt.event.ActionEvent;
-import javax.swing.JRadioButton;
-import javax.swing.JComboBox;
-import javax.swing.JTextField;
-import javax.swing.JSlider;
-import javax.swing.JProgressBar;
-import javax.swing.DefaultComboBoxModel;
 
 public class Bomber {
 
