@@ -1,9 +1,6 @@
 # John's Sms Bomber
 A very, very simple sms bomber written in python and java. 
 I realized that this repo was getting some decent traffic from google which means there are some non-devs finding this, so for this reason, I made the code even cleaner and easier to config. If you have no idea what to do with this, and were looking for a simple program with UI, well, you're going to want to google "how to run python on windows/mac"; However, Mac already comes with python. If you have a Mac, just download the .py file here to Desktop, open terminal and run ```cd Desktop``` then ```python JohnsTextBomber.py``` after you've edited the CONFIG of course  
-  
-### Buy me a coffee  
-https://buymeacoff.ee/hi  
    
 ### DESKTOP APPLICATION FOR N00BS  
 download: https://github.com/jdleo/SMS-BOMBER/releases/tag/v0.3-jar  
