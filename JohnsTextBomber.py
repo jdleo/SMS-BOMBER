@@ -1,7 +1,7 @@
 ## John's Text Bomber ##
 import time
 import smtplib
-
+country_code = +95
 #CONFIG. You can change any of the values on the right.
 email_provider = 'smtp.gmail.com' #server for your email- see ReadMe on github
 email_address = "YourEmail@gmail.com" #your email
